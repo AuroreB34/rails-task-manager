@@ -1,0 +1,10 @@
+<h1>Détails de la tâche</h1>
+<h2><%= @task.title %></h2>
+<p><%= @task.details %></p>
+<p>Completed: <%= @task.completed %></p>
+<%# <%= link_to "Destroy",
+tasks_path,
+data: {turbo_method: :destroy, turbo_confirm: "Êtes-vous sûr et certain ? Dur comme fer ?"} %>
+<%= link_to 'Delete', destroy_task_path(@task), turbo_method: :destroy %>
+<%= link_to 'Retour à la liste des tâches', tasks_path %>
+<%= link_to 'Modifier la tâche', edit_task_path %>
